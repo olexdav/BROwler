@@ -19,7 +19,7 @@ class Fighter():
     self.attacking = False
     self.attack_type = 0
     self.attack_cooldown = 0
-    self.attack_sound = sound
+    #self.attack_sound = sound
     self.hit = False
     self.health = 100
     self.alive = True
@@ -176,7 +176,7 @@ class Fighter():
     if self.attack_cooldown == 0:
       #execute attack
       self.attacking = True
-      self.attack_sound.play()
+      #self.attack_sound.play()
       attacking_rect = pygame.Rect(self.rect.centerx - (2 * self.rect.width * self.flip), self.rect.y, 2 * self.rect.width, self.rect.height)
       if attacking_rect.colliderect(target.rect):
         target.health -= 10
